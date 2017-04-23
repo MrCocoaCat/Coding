@@ -7,6 +7,7 @@
 #include<fcntl.h>
 #include<netdb.h>
 #include<pthread.h>
+#include<poll.h>
 #define DEF_STD_ERROR (-1) //erro 
 
 
@@ -35,48 +36,68 @@ void set_block(int sock,BOOL flag)
 
 struct thread_param
 {
-	fd_set my_set;
+	struct pollfd fds[1000];
 	int my_count;
 	pthread_mitex_t my_mutex;
-	int my_max;
-}
+};
+
 void * deal_thread(void * param )
 {
-	struct thread_param *p=(truct thread_param *)param;
+	struct thread_param *p=(struct thread_param *)param;
 	fd_set read_set;
 	int ret;
 	struct timeval my_tv;
 	my_tv.tv_sec=0;
 	my_tv.tv_usec=0;
 	int i;
+	char * buf[1024];
 	while(1)
 	{
-		//clear
-		FD_ZERO(&read_set);
-		pthread_mutex_lock(&p->my_mutex);
-		//fill
-		memcpy(&read_set,p->my_set,(sizeof(read_set)));
-		//select
-		//最大检查
-		ret=select(p->my_max+1,&read_set,NULL,NULL);
-		pthread_mutex_unlock(&p->my_mutex);
-		if(ret<0)
+		ret=poll(p->fds,p->my_count,10);
+		//
+	   if(ret<0)
 		{
 			printf("erro");
 			break;
 		}
-		else if()
+		else if(ret==0)
 		{
 			usleep(10);
 			continue;
 		}
 		//check
-		for(i=p->my_max-1;i>2;--i)
+		for(i=0;i<p->my_count;++i) //遍历所有几集合
 		{
-			if(FD_ISSET(i,&read_set)>0) //如果有数据
+			if(POLLERR&fds[i].revents) //如果有数据
 			{
-				printf("sock[%d]",i);
-				sleep(1);
+				//delete client
+				pthread_mutex_lock(&p->my_mutex);
+				close(p->fds[i].fd);
+				printf("force");
+				p->fds[i]=p->fds[p->my_count];
+				pthread_mutex_unlock(&p->my_mutex);
+			}
+			else if(POLLRDHUP&fds[i].revents)
+			{
+				pthread_mutex_lock(&p->my_mutex);
+				close(p->fds[i].fd);
+				printf("force");
+				p->fds[i]=p->fds[p->my_count];
+				pthread_mutex_unlock(&p->my_mutex);
+			}
+			else if (POLLIN&fds[i].revents)
+			{
+					//rec
+					ret=recv(fds[i].fd,buf,sizeof(buf),0);
+					
+				//	send(fds[i].fd,buf,strlen(buf)+1,sizeof(buf),0);
+					p->fds[i].events=POLLOUT;
+			}
+			else if(POLLOUT&fds[i].revents)
+			{
+				//sent and no block
+				send(fds[i].fd,buf,strlen(buf)+1,sizeof(buf),0);
+				fds[i].events=POLLIN|POLLERR; //改回接收数据属性
 			}
 		}
 	}
@@ -144,7 +165,8 @@ int main(int argc,char * argv[])
 		pthread_mutex_lock(&param.my_mutex); //枷锁
 		if(param.my_count<1024)
 		{
-			FD_SET(ret,&param.my_set);
+			param.fds[param.my_count].fd=ret;
+			param.fds[param.my_count].event=POLLIN|POLLERR|POLLRHUP;
 			param.my_count++;
 		}
 		// if it is first,creat thread
