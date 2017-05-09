@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/app.dir/div.c.o CMakeFiles/app.dir/main.c.o CMakeFiles/app.dir/add.c.o CMakeFiles/app.dir/mul.c.o CMakeFiles/app.dir/sub.cpp.o  -o app -rdynamic 
