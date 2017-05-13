@@ -37,7 +37,7 @@ struct thread_param
 {
 	fd_set my_set;
 	int my_count;
-	pthread_mitex_t my_mutex;
+	pthread_mutex_t my_mutex;
 	int my_max;
 }
 void * deal_thread(void * param )
@@ -75,7 +75,11 @@ void * deal_thread(void * param )
 		{
 			if(FD_ISSET(i,&read_set)>0) //如果有数据
 			{
-				printf("sock[%d]",i);
+				
+				recv(i, szbuf, sizeof(szbuf)+1, 0);
+				printf("Socket[%d]:%s\n", i, szbuf);
+				send(i, szbuf, sizeof(szbuf), 0);
+				
 				sleep(1);
 			}
 		}
@@ -96,7 +100,7 @@ int main(int argc,char * argv[])
 	param.my_count=0;
 	param.my_max=2;
 	FD_ZERO(&param.my_set); //清空
-	pthread_mitex_init(&param.my_mutex,NULL); //建立互斥量
+	pthread_mutex_init(&param.my_mutex,NULL); //建立互斥量
 	pthread_t thread;  
 	//创建套接字
 	//(域，AF_INET表示IPv4域；套接字类型，SOCK_STREAM表示TCP；0表示选定默认协议)
@@ -144,13 +148,13 @@ int main(int argc,char * argv[])
 		pthread_mutex_lock(&param.my_mutex); //枷锁
 		if(param.my_count<1024)
 		{
-			FD_SET(ret,&param.my_set);
-			param.my_count++;
+			FD_SET(ret,&param.my_set); //将描述符加入集合
+			param.my_count++;  //集合内的描述符数量加1，用这个变量来控制select 的第一个参数
 		}
 		// if it is first,creat thread
-		if(param.my_count<=1)
+		if(param.my_count<=1) //如果一个没有，即第一次，创建一个线程
 		{
-			pthread_creat(&thread,NULL,deal_thread,&param);
+			pthread_creat(&thread,NULL,deal_thread,&param); //创建线程
 			
 		}
 		pthread_mutex_unlock(&param.my_mutex); //解锁

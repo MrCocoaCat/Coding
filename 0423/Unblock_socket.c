@@ -92,7 +92,7 @@ int main(int argc,char * argv[])
 		
 		if(child<0) //出现错误
 		{
-			senf(ret,"busy",sizeof("busy"),0);
+			send(ret,"busy",sizeof("busy"),0);
 			close(ret);
 		}
 		else if(child==0) //子进程处理链接

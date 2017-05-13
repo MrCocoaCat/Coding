@@ -82,7 +82,7 @@ void* Select_thread(void *p)
 			{
 				if(FD_ISSET(i, &read_set) > 0)
 				{
-					recv(i, szbuf, sizeof(szbuf)+1, 0);
+					recv(, szbuf, sizeof(szbuf)+1, 0);
 					printf("Socket[%d]:%s\n", i, szbuf);
 					send(i, szbuf, sizeof(szbuf), 0);
 				}
