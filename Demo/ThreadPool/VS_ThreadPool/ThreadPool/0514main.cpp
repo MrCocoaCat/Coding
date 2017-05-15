@@ -1,4 +1,5 @@
 #include<iostream>
+#include <windows.h>
 #include "ThreadPool.h"
 //#include "Sys.h"
 using namespace std;
@@ -18,6 +19,7 @@ public:
 	void Run()
 	{
 		cout << m_a << "+" << m_b << "=" << m_a + m_b << endl;
+		Sleep(1000);
 	}
 };
 
@@ -29,11 +31,10 @@ int main()
 	tp.CreateThreadPool(4,2);
 
 	Itask *pItask;
-	for(int i = 0 ; i < 100 ; i++)
+	for(int i = 0 ; i < 10; i++)
 	{
 		pItask = new AddItask(i,i+1);
 		tp.PushItask(pItask);
-
 	}
 
 	system("pause");

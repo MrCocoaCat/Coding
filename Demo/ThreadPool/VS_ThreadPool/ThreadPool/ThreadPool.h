@@ -29,10 +29,10 @@ public:
 	//4.投递任务
 	bool PushItask(Itask* Itask);
 public:
-	queue<Itask*> m_quItask;
+	queue<Itask*> m_quItask; //任务队列
 private:
-	HANDLE m_hSemaphore;
-	list<HANDLE> m_lstThread;
+	HANDLE m_hSemaphore; //信号量
+	list<HANDLE> m_lstThread; //管理线程句柄
 	bool IsExit;
 	long m_RunThreadNum;
 	long m_CreateThreadNum;
