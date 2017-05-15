@@ -76,11 +76,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adaptec适配器模型.cpp" />
+    <ClCompile Include="Iterator迭代器.cpp" />
+    <ClCompile Include="singleton单例模式.cpp" />
     <ClCompile Include="原型模式.cpp" />
     <ClCompile Include="工厂方法.cpp" />
-    <ClCompile Include="抽象工厂.cpp" />
+    <ClCompile Include="AbstractFactory抽象工厂.cpp" />
     <ClCompile Include="简单工厂.cpp" />
-    <ClCompile Include="观察者.cpp" />
+    <ClCompile Include="Observer观察者.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

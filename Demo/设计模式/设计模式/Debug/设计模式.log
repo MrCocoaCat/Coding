@@ -1,19 +1,20 @@
-﻿生成启动时间为 2017/5/15 10:49:57。
-     1>项目“G:\科林明伦\设计模式\设计模式\设计模式.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2017/5/15 14:25:17。
+     1>项目“C:\Users\li\Documents\GitHub\colin\Demo\设计模式\设计模式\设计模式.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "原型模式.cpp" "抽象工厂.cpp"
-         抽象工厂.cpp
-         原型模式.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "Adaptec适配器模型.cpp" "观察者.cpp"
+         观察者.cpp
+         Adaptec适配器模型.cpp
          正在生成代码...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\科林明伦\设计模式\Debug\设计模式.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\科林明伦\设计模式\Debug\设计模式.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\科林明伦\设计模式\Debug\设计模式.lib" /MACHINE:X86 "Debug\原型模式.obj"
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\li\Documents\GitHub\colin\Demo\设计模式\Debug\设计模式.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\li\Documents\GitHub\colin\Demo\设计模式\Debug\设计模式.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\li\Documents\GitHub\colin\Demo\设计模式\Debug\设计模式.lib" /MACHINE:X86 "Debug\Adaptec适配器模型.obj"
+         "Debug\原型模式.obj"
          "Debug\工厂方法.obj"
          "Debug\抽象工厂.obj"
          "Debug\简单工厂.obj"
          "Debug\观察者.obj"
-         设计模式.vcxproj -> G:\科林明伦\设计模式\Debug\设计模式.exe
-     1>已完成生成项目“G:\科林明伦\设计模式\设计模式\设计模式.vcxproj”(Build 个目标)的操作。
+         设计模式.vcxproj -> C:\Users\li\Documents\GitHub\colin\Demo\设计模式\Debug\设计模式.exe
+     1>已完成生成项目“C:\Users\li\Documents\GitHub\colin\Demo\设计模式\设计模式\设计模式.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.96
+已用时间 00:00:03.36

@@ -13,22 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\创建型">
+      <UniqueIdentifier>{53a4d0c5-b5cd-483a-8699-ea43925d9ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\行为型">
+      <UniqueIdentifier>{317c23e8-4bce-4185-ac21-792e1e4baba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\结构型">
+      <UniqueIdentifier>{0dc3171c-09cc-4274-8307-f2c256460694}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="观察者.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="简单工厂.cpp">
+    <ClCompile Include="Adaptec适配器模型.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="工厂方法.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\创建型</Filter>
     </ClCompile>
-    <ClCompile Include="抽象工厂.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="AbstractFactory抽象工厂.cpp">
+      <Filter>源文件\创建型</Filter>
     </ClCompile>
     <ClCompile Include="原型模式.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\创建型</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer观察者.cpp">
+      <Filter>源文件\行为型</Filter>
+    </ClCompile>
+    <ClCompile Include="简单工厂.cpp">
+      <Filter>源文件\创建型</Filter>
+    </ClCompile>
+    <ClCompile Include="Iterator迭代器.cpp">
+      <Filter>源文件\行为型</Filter>
+    </ClCompile>
+    <ClCompile Include="singleton单例模式.cpp">
+      <Filter>源文件\创建型</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
