@@ -7,7 +7,7 @@
 #include<fcntl.h>
 #include<netdb.h>
 #include<pthread.h>
-#define DEF_STD_ERROR (-1) //erro 
+#define DEF_STD_ERROR (-1) //error 
 
 
 #ifndef TRUE
