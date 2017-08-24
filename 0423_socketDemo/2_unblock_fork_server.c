@@ -68,7 +68,7 @@ int main()
 	//set noblock
 	set_block(sock,0);
 	//accept
-	while(1)
+	while(1)//管理多练接时，用这个大循环
 	{
 		ret = accept(sock,NULL,NULL);
 		if(ret == -1)
@@ -86,15 +86,15 @@ int main()
 				return -1;
 			}
 		}
-
+		
 		//creat child
 		pid_t pdchild;
 		pdchild=fork();
 		if(pdchild < 0)
 		{	
 			//创建失败
-			send(ret,"creating child",sizeof("creating child"),0);
-			close(ret);
+			//send(ret,"creating child",sizeof("creating child"),0);
+			//close(ret);
 			perror("creat child");
 			continue;
 		}
@@ -106,22 +106,21 @@ int main()
 			if(pdchild == 0 )
 			{
 				//子进程的子进程
-				close(sock);
-				set_block(ret,0);
 				while(1)
 				{
+					set_block(ret,0);
 					len = recv(ret,buf,sizeof(buf),0);
 					if(len == -1)
 					{
 
 						if(errno == EAGAIN)
 						{
-							usleep(10);
+							sleep(1);
 							continue;
 						}
 						else
 						{
-							perror("accept");
+							perror("recv: ");
 							break;
 						}
 					}
@@ -130,26 +129,30 @@ int main()
 						printf("对段正常退出");
 						break;
 					}
-					printf("sock:[%d]:%s\n",ret,buf);
-					send(ret,buf,strlen(buf)+1,0);
+					else
+					{
+						printf("sock:[%d]:%s\n",ret,buf);
+						send(ret,buf,strlen(buf)+1,0);
+					}
 				}
+				close(sock);
 				close(ret);
 				exit(0);
 			}
 			else if(pdchild > 0 )
 			{
 				//子进程本身，退出,使子进程的子进程变孤儿进程
-				close(ret);
-				close(sock);
+				//close(ret);
+				//close(sock);
 				exit(0);
 			}
 		}
 		else
 		{
 			//父进程
-			//wait();
-			waitpid(pdchild,0,0);
-			close(ret);
+			wait(NULL);
+			//waitpid(pdchild,0,0);
+			//	close(ret);
 		}
 	}
 	//close
