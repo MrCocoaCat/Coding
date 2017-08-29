@@ -22,11 +22,12 @@ int main()
 	int ret;
 	int sock;
 	int len;
+	int count;
 	char buf[1024];
 	int clientfd;
 	struct sockaddr_in addr;
-	int i;     
-   	int epoll_id;
+	int i=0;     
+	int epoll_id;
 	struct epoll_event ep_event;
 	struct epoll_event ret_events[100];
 	//create socket
@@ -63,12 +64,12 @@ int main()
 	epoll_id=epoll_create(100);//管理100个
 
 	//promote sock to epoll
-/**************************************************************
-	EPOLL_CTL_ADD 注册新的fd到epfd中
-	EPOLL_CTL_MOD 修改已经注册的fd的监听事件
-	EPOLL_CTL_DEL 从epfd中删除一个fd
-***************************************************************/
-//	ep_event.events = EPOLLIN | EPOLLET; //ET模式，不重复通知 
+	/**************************************************************
+	  EPOLL_CTL_ADD 注册新的fd到epfd中
+	  EPOLL_CTL_MOD 修改已经注册的fd的监听事件
+	  EPOLL_CTL_DEL 从epfd中删除一个fd
+	 ***************************************************************/
+	//	ep_event.events = EPOLLIN | EPOLLET; //ET模式，不重复通知 
 	ep_event.events = EPOLLIN;
 	epoll_ctl(epoll_id,EPOLL_CTL_ADD,sock,&ep_event);
 	//accept
@@ -87,30 +88,48 @@ int main()
 		}
 		for( i = 0; i < ret; ++i)
 		{
-			if(EPOLLIN & ret_events[i].events)
+			if(EPOLLERR & ret_events[i].events)
+			{
+				epoll_ctl(epoll_id,EPOLL_CTL_DEL,ret_events[i].data.fd,NULL);
+				close(ret_events[i].data.fd);
+				printf("client:[%d] force quite\n",ret_events[i].data.fd);
+			}
+			else if(EPOLLRDHUP & ret_events[i].events)
+			{
+				epoll_ctl(epoll_id,EPOLL_CTL_DEL,ret_events[i].data.fd,NULL);
+				close(ret_events[i].data.fd);
+				printf("client:[%d] grace quite\n",ret_events[i].data.fd);
+			}
+			else if(EPOLLIN & ret_events[i].events)
 			{
 				if(ret_events[i].data.fd == sock)
 				{
 					//accept
 					clientfd = accept(sock,NULL,NULL);
-					ep_event.events = EPOLLIN | EPOLLERR | POLLHUP;
+					ep_event.events = EPOLLIN | EPOLLERR | POLLRDHUP|EPOLLET;i//同样的时间只通知一次	
+					
+					ep_event.data.fd = clientfd;
 					epoll_ctl(epoll_id,EPOLL_CTL_ADD,clientfd,&ep_event);//添加
 				}	
 				else
 				{
-					recv(ret_events[i].data.fd,buf,sizeof(buf),0);
+					memset(buf,0,sizeof(buf));
+					count=recv(ret_events[i].data.fd,buf,sizeof(buf),0);
+
 					printf("client :[%d] %s",ret_events[i].data.fd , buf);
 					fflush(NULL);
 					ep_event.events = EPOLLOUT;
+					ep_event.data.fd = ret_events[i].data.fd;
 					epoll_ctl(epoll_id,EPOLL_CTL_MOD,ret_events[i].data.fd,&ep_event);
 				}
 			}
-			if(EPOLLOUT & ret_events[i].events)
+			else if(EPOLLOUT & ret_events[i].events)
 			{
 				send(ret_events[i].data.fd,buf,strlen(buf)+1,0);
 				ep_event.events = EPOLLIN | EPOLLERR | POLLHUP;
+				ep_event.data.fd = ret_events[i].data.fd;
 				epoll_ctl(epoll_id,EPOLL_CTL_MOD,ret_events[i].data.fd,&ep_event);
-				
+
 			}
 		}
 	}

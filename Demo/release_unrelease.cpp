@@ -3,6 +3,9 @@
 //协议中出现的字符数组性成员，必须有对应长度，只发有效长度
 //防止两端的对其方式不同，导致发送错位，保留每段默认对其方式，采用将数据填充到一个字符串中，保证两端数据一致
 #include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
 using namespace std;
 #define STR_LOGINTYPE 1
 #define MAXPASSWORDLEN 10
@@ -116,7 +119,7 @@ int main()
 	cout<<stru_rec.m_Id<<endl;
 	cout<<stru_rec.m_PasswordLen<<endl;
 	cout<<stru_rec.m_Password<<endl;
-	system("pause");
+	//system("pause");
 	
 }
 
