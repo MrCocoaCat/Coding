@@ -54,7 +54,7 @@ int main()
 	//listen
 	listen(serverfd,LISTENNUM);
 
-//        set_block(serverfd,0);
+     //  set_block(serverfd,0);
 	//accept
 	while(1)
 	{
