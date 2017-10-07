@@ -1,10 +1,11 @@
-#pragma once
-
+#pragma once 
 #include <Windows.h>
 
 
 class CMyLock
 {
+private:
+	CRITICAL_SECTION m_cs;
 public:
 	CMyLock()
 	{
@@ -18,11 +19,8 @@ public:
 	{
 		EnterCriticalSection(&m_cs);
 	}
-
 	void UnLock()
 	{
 		LeaveCriticalSection(&m_cs);
 	}
-private:
-	CRITICAL_SECTION m_cs;	
 };

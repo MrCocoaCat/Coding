@@ -1,18 +1,25 @@
 #pragma once
-#include <Windows.h>
-#include <queue>
+#include <Queue>
 #include <list>
-#include"MyLock.h"
-using namespace std;
+
+#include "MyLock.h"
+#include <Windows.h>
 
 class Itask
 {
 public:
-	Itask(){};
-	virtual ~Itask(){};//虚析构 以便执行子类构造
+	Itask()
+	{
+
+	}
+	virtual ~Itask()
+	{
+
+	}
 public:
-	virtual void Run() = 0;//任务执行函数
+	virtual void RunItask() = 0;
 };
+
 
 class ThreadPool
 {
@@ -21,21 +28,21 @@ public:
 	~ThreadPool(void);
 public:
 	//1.创建线程池
-	bool CreateThreadPool(long lMaxThreadNumber,long lMinThreadNumber);
+	bool CreateThreadPool(long lMinThreadNum,long lMaxThreadNum);
 	//2.销毁线程池
 	void DestoryThreadPool();
 	//3.线程函数
-	static unsigned __stdcall ThreadProc(void * lpParameter);
+	static unsigned _stdcall ThreadProc (void *lpvoid);
 	//4.投递任务
-	bool PushItask(Itask* Itask);
-public:
-	queue<Itask*> m_quItask;
+	bool PushItask(Itask *);
 private:
-	HANDLE m_hSemaphore;
-	list<HANDLE> m_lstThread;
-	bool IsExit;
-	long m_RunThreadNum;
-	long m_CreateThreadNum;
-	long m_MaxThreadNum;
-    CMyLock m_lock;
+	std::queue<Itask *> m_qItask;
+	std::list<HANDLE> m_lstHandle;
+	HANDLE m_hSemphore;
+	bool m_FlagQuit;
+	long m_lCreateThreadNum;
+	long m_lRunThreadNum;
+	long m_lMaxThreadNum;
+	CMyLock m_MyLock;
 };
+
