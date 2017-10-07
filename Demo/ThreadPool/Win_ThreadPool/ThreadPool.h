@@ -38,5 +38,4 @@ private:
 	long m_CreateThreadNum;
 	long m_MaxThreadNum;
     CMyLock m_lock;
-
 };
