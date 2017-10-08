@@ -51,14 +51,13 @@ public:
 int main()
 {
 	ThreadPool tp;
-	tp.CreateThreadPool(1,16);
+	tp.CreateThreadPool(8,16); //init thread
 
 	Itask *pItask;
 	for(int i = 0 ; i < 10000 ; i++)
 	{
 		pItask = new TestItask(i,i+1);
 		tp.PushItask(pItask);
-
 	}
 
 	system("pause");
