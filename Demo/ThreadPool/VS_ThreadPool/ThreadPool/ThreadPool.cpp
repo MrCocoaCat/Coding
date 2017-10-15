@@ -9,11 +9,13 @@ ThreadPool::ThreadPool(void)
 	m_lCreateThreadNum = 0;
 	m_lRunThreadNum = 0;
 	m_lMaxThreadNum = 0;
+	m_MyQueueItask.InitQueue(1000);
 }
 
 
 ThreadPool::~ThreadPool(void)
 {
+	m_MyQueueItask.UninitQueue();
 }
 
 bool ThreadPool::CreateThreadPool(long lMinThreadNum,long lMaxThreadNum)
@@ -79,16 +81,20 @@ unsigned _stdcall ThreadPool::ThreadProc (void *lpvoid)
 		//等信号
 		WaitForSingleObject(pthis->m_hSemphore,INFINITE);
 		InterlockedIncrement(&pthis->m_lRunThreadNum); //原子操作
-		while(!pthis->m_qItask.empty())
+		while(pthis->m_MyQueueItask.GetQueueLen() != 0 )
 		{
-			pthis->m_MyLock.Lock(); 
 
+			/*****************************/
+			pthis->m_MyQueueItask.Pop(pItask);
+
+			/*****************************
+			pthis->m_MyLock.Lock(); 
 			pItask = pthis->m_qItask.front();//从任务队列中拿任务
 			pthis->m_qItask.pop();
-
 			pthis->m_MyLock.UnLock();
+			*****************************/
 
-			pItask->RunItask();//执行任务
+			(pItask)->RunItask();//执行任务
 		}
 
 		
@@ -103,9 +109,15 @@ bool ThreadPool::PushItask(Itask *pItask)
 	{
 		return false;
 	}
+	/*****************************/
+	m_MyQueueItask.Push(pItask);
+	/*****************************
 	m_MyLock.Lock();
 	m_qItask.push(pItask);
 	m_MyLock.UnLock();
+	*****************************/
+
+
 	if(m_lRunThreadNum < m_lCreateThreadNum) //正在运行的线程数量 小于 创建的线程数量，释放信号量 
 	{
 		ReleaseSemaphore(m_hSemphore,1,NULL);

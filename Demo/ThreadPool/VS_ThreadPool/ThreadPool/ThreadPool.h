@@ -3,6 +3,7 @@
 #include <list>
 
 #include "MyLock.h"
+#include "MyQueue.h"
 #include <Windows.h>
 
 class Itask
@@ -35,8 +36,11 @@ public:
 	static unsigned _stdcall ThreadProc (void *lpvoid);
 	//4.Í¶µÝÈÎÎñ
 	bool PushItask(Itask *);
+
+	
 private:
-	std::queue<Itask *> m_qItask;
+	CMyQueue<Itask > m_MyQueueItask;
+	//std::queue<Itask *> m_qItask;
 	std::list<HANDLE> m_lstHandle;
 	HANDLE m_hSemphore;
 	bool m_FlagQuit;

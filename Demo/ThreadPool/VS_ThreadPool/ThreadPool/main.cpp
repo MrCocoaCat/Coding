@@ -34,7 +34,6 @@ private:
 public:
 	void RunItask()
 	{
-		//cout<<"a";
 		for(int i=0;i<65530;i++)
 		{
 			for(int j=0;j<65530;j++)
@@ -45,7 +44,6 @@ public:
 			}
 		}
 		cout << m_a << "+" << m_b << "=" << m_a + m_b << endl;
-		//Sleep(1000);
 	}
 };
 int main()
@@ -54,10 +52,11 @@ int main()
 	tp.CreateThreadPool(8,16); //init thread
 
 	Itask *pItask;
-	for(int i = 0 ; i < 10000 ; i++)
+	for(int i = 0 ; i < 100 ; i++)
 	{
 		pItask = new TestItask(i,i+1);
 		tp.PushItask(pItask);
+		//tp.m_MyQueueItask.Push(&pItask);
 	}
 
 	system("pause");

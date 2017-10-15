@@ -24,3 +24,26 @@ public:
 		LeaveCriticalSection(&m_cs);
 	}
 };
+
+class CAutoLock
+{
+public:
+	CAutoLock(CMyLock* lock)
+	{
+		m_myLock = lock;
+		if (m_myLock)
+		{
+			m_myLock->Lock();
+		}
+	}
+	~CAutoLock()
+	{
+		if (m_myLock)
+		{
+			m_myLock->UnLock();
+		}
+
+	}
+private:
+	CMyLock* m_myLock;
+};
