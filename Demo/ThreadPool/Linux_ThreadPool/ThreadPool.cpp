@@ -22,15 +22,13 @@ bool ThreadPool::CreateThreadPool(long lMinThreadNum,long lMaxThreadNum)
 		return false;
 	}
 
-	//��ʼ������
 	m_FlagQuit = true;
-	int res = sem_init(&sem, 0, lMaxThreadNum);
+	int res = sem_init(&m_sem, 0, lMaxThreadNum);
 	if(res == -1)
 	{
 		perror("semaphore intitialization failed\n");
 		exit(EXIT_FAILURE);
 	}
-	//�����߳�
 
 	for(int i=0; i<lMinThreadNum; i++)
 	{
@@ -41,7 +39,6 @@ bool ThreadPool::CreateThreadPool(long lMinThreadNum,long lMaxThreadNum)
 			m_lstHandle.push_back(thread_id);
 		}
 	}
-
 	m_lMaxThreadNum = lMaxThreadNum;
 	m_lCreateThreadNum = lMinThreadNum;
 	return true;
@@ -51,22 +48,13 @@ void ThreadPool::DestoryThreadPool()
 {
 	m_FlagQuit = false;
 	std::list<pthread_t>::iterator ite = m_lstHandle.begin();
-	//while(ite != m_lstHandle.end())
-	//{
-	//	if(WaitForSingleObject(*ite,100)== WAIT_TIMEOUT)
-	//	{
-	//		TerminateThread(*ite,-1);
-	//	}
-	//	CloseHandle(*ite);
-	//	*ite=NULL;
-	//	ite++;
-	//}
-	//m_lstHandle.clear();
-	//if(m_hSemphore)
-	//{
-	//	CloseHandle(m_hSemphore);
-	//	m_hSemphore=NULL;
-	//}
+	while(ite != m_lstHandle.end())
+	{
+		pthread_join(*ite,NULL);
+		ite++;
+	}
+	m_lstHandle.clear();
+	sem_destroy(&m_sem);
 
 }
 
@@ -76,10 +64,12 @@ void * ThreadPool::ThreadProc (void *lpvoid)
 	Itask *pItask = NULL;
 	while(pthis->m_FlagQuit)
 	{
-		//���ź�
-		sem_wait(&pthis->sem);
-		//InterlockedIncrement(&pthis->m_lRunThreadNum);
+
+		sem_wait(&pthis->m_sem);
+
+		pthis->m_NumLock.Lock();
 		pthis->m_lRunThreadNum++;
+		pthis->m_NumLock.UnLock();
 		while(!pthis->m_qItask.empty())
 		{
 			pthis->m_MyLock.Lock();
@@ -89,8 +79,10 @@ void * ThreadPool::ThreadProc (void *lpvoid)
 			pItask->RunItask();
 		}
 
-		//InterlockedDecrement(&pthis->m_lRunThreadNum);
+
+		pthis->m_NumLock.Lock();
 		pthis->m_lRunThreadNum--;
+		pthis->m_NumLock.Lock();
 
 	}
 	return 0;
@@ -107,7 +99,7 @@ bool ThreadPool::PushItask(Itask *pItask)
 	m_MyLock.UnLock();
 	if(m_lRunThreadNum < m_lCreateThreadNum)
 	{
-		sem_post(&sem);
+		sem_post(&m_sem);
 	}
 	else if(m_lCreateThreadNum < m_lMaxThreadNum)
 	{
@@ -119,7 +111,7 @@ bool ThreadPool::PushItask(Itask *pItask)
 			m_lstHandle.push_back(thread_id);
 		}
 		m_lCreateThreadNum++;
-		sem_post(&sem);
+		sem_post(&m_sem);
 	}
 	else
 	{
