@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -march=native -O3 -pthread -g   CMakeFiles/myfind.dir/main.cpp.o  -o myfind 

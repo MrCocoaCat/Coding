@@ -41,7 +41,7 @@ public:
 			{
 				int a=0;
 				a++;
-				a--;
+
 			}
 		}
 		cout << m_a << "+" << m_b << "=" << m_a + m_b << endl;
@@ -61,6 +61,5 @@ int main()
 
 	}
 
-	system("pause");
 	return 0;
 }

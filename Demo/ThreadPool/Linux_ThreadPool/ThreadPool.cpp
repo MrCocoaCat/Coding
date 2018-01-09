@@ -79,7 +79,13 @@ void * ThreadPool::ThreadProc (void *lpvoid)
 		//���ź�
 		sem_wait(&pthis->sem);
 		//InterlockedIncrement(&pthis->m_lRunThreadNum);
+
+		pthis->m_NumLock.Lock();
 		pthis->m_lRunThreadNum++;
+		pthis->m_NumLock.UnLock();
+
+
+
 		while(!pthis->m_qItask.empty())
 		{
 			pthis->m_MyLock.Lock();
@@ -90,6 +96,7 @@ void * ThreadPool::ThreadProc (void *lpvoid)
 		}
 
 		//InterlockedDecrement(&pthis->m_lRunThreadNum);
+
 		pthis->m_lRunThreadNum--;
 
 	}
