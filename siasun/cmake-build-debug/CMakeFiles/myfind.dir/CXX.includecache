@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liyubo/siasun/main.cpp
+iostream
+-
+dirent.h
+-
+sys/stat.h
+-
+assert.h
+-
+stdio.h
+-
+unistd.h
+-
+pthread.h
+-
+dirent.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+string.h
+-
+string
+-
+vector
+-
+
