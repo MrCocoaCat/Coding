@@ -36,12 +36,16 @@ public:
 	queue<Itask*> m_qItask;
 private:
 	//HANDLE m_hSemaphore;
-	sem_t sem;
+	sem_t m_sem;
 	list<pthread_t> m_lstHandle;
 	bool m_FlagQuit;
 	long m_lRunThreadNum;
 	long m_lCreateThreadNum;
 	long m_lMaxThreadNum;
     CMyLock m_MyLock;
+<<<<<<< HEAD
     CMyLock m_NumLock;
+=======
+	CMyLock m_NumLock;
+>>>>>>> 2cf76f66ffe38110321982a09f7d40a6cbb2342c
 };

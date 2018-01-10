@@ -20,6 +20,7 @@ public:
 	}
 };
 
+
 class TestItask:public Itask
 {
 public:
@@ -34,24 +35,26 @@ private:
 public:
 	void RunItask()
 	{
-		//cout<<"a";
+        int a=0;
 		for(int i=0;i<65530;i++)
 		{
 			for(int j=0;j<65530;j++)
 			{
-				int a=0;
 				a++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2cf76f66ffe38110321982a09f7d40a6cbb2342c
 			}
 		}
 		cout << m_a << "+" << m_b << "=" << m_a + m_b << endl;
-		//Sleep(1000);
+        sleep(1);
 	}
 };
 int main()
 {
 	ThreadPool tp;
-	tp.CreateThreadPool(1,16);
+	tp.CreateThreadPool(1,4);
 
 	Itask *pItask;
 	for(int i = 0 ; i < 10000 ; i++)
@@ -60,6 +63,9 @@ int main()
 		tp.PushItask(pItask);
 
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2cf76f66ffe38110321982a09f7d40a6cbb2342c
 	return 0;
 }
