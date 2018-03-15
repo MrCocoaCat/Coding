@@ -2,13 +2,13 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="nefu" targetName="feature_detection" />
       <config projectName="nefu" targetName="etra" />
       <config projectName="nefu" targetName="filter" />
       <config projectName="nefu" targetName="knn_matcher" />
       <config projectName="nefu" targetName="Triangulation" />
-      <config projectName="nefu" targetName="bfm_matcher" />
       <config projectName="nefu" targetName="possion" />
-      <config projectName="nefu" targetName="feature_detection" />
+      <config projectName="nefu" targetName="bfm_matcher" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -39,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="540">
               <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="30" />
               <folding />
             </state>
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="knn_matcher.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="knn_matcher.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="352">
+              <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding>
                 <element signature="e#71#93#0" expanded="true" />
               </folding>
@@ -84,7 +84,7 @@
       <file leaf-file-name="features.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="720">
               <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -96,7 +96,7 @@
       <file leaf-file-name="possion.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/possion.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -128,8 +128,8 @@
       <file leaf-file-name="bfm_matcher.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-644">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="20">
+              <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/surface.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/features.cpp" />
-        <option value="$PROJECT_DIR$/knn_matcher.cpp" />
         <option value="$PROJECT_DIR$/bfm_matcher.cpp" />
+        <option value="$PROJECT_DIR$/knn_matcher.cpp" />
       </list>
     </option>
   </component>
@@ -154,7 +154,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="150" />
     <option name="y" value="81" />
     <option name="width" value="1495" />
@@ -204,26 +204,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.feature_detection">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="feature_detection" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Application.bfm_matcher">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="Triangulation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="Triangulation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="Triangulation">
       <envs />
     </configuration>
-    <configuration name="bfm_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg ../0020_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="bfm_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="feature_detection">
+    <configuration name="bfm_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg ../0020_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="bfm_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
       <envs />
     </configuration>
-    <configuration name="etra" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="etra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="feature_detection">
+    <configuration name="etra" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="etra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
       <envs />
     </configuration>
-    <configuration name="feature_detection" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="feature_detection" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="feature_detection">
+    <configuration name="feature_detection" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="feature_detection" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
       <envs />
     </configuration>
     <configuration name="filter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="filter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
       <envs />
     </configuration>
-    <configuration name="knn_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg " PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="knn_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
+    <configuration name="knn_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg ../0020_color.jpg " PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="knn_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
       <envs />
     </configuration>
     <configuration name="possion" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="possion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="surface">
@@ -255,15 +255,16 @@
       <updated>1521106258309</updated>
       <workItem from="1521106259802" duration="2407000" />
       <workItem from="1521110071905" duration="599000" />
-      <workItem from="1521111634418" duration="982000" />
+      <workItem from="1521111634418" duration="1368000" />
+      <workItem from="1521117080213" duration="218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3988000" />
+    <option name="totallyTimeSpent" value="4592000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="150" y="81" width="1495" height="965" extended-state="1" />
+    <frame x="150" y="81" width="1495" height="965" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -271,12 +272,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.375895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -297,6 +298,92 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/table_scene_lms400.pcd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etra.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding>
+            <element signature="e#71#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/possion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/table_scene_lms400.pcd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -547,7 +634,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.cpp">
+    <entry file="file://$PROJECT_DIR$/possion.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -555,35 +642,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/possion.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding>
-            <element signature="e#71#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="720">
           <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -593,9 +654,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="540">
           <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <element signature="e#71#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

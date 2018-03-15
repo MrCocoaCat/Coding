@@ -38,14 +38,14 @@ int main(int argc, char* argv[])
 
 
     // 为了更好的显示图像，对图像进行降采样处理
-    cv::resize(img1, img1, cv::Size(img1.cols * 0.2, img1.rows * 0.2), 0.5, 0.5);
-    cv::resize(img2, img2, cv::Size(img2.cols * 0.2, img2.rows * 0.2), 0.5, 0.5);
+    cv::resize(img1, img1, cv::Size(img1.cols * 0.5, img1.rows * 0.5), 0.5, 0.5);
+    cv::resize(img2, img2, cv::Size(img2.cols * 0.5, img2.rows * 0.5), 0.5, 0.5);
     std::cout << "img1 infos after resize: " << img1.rows << " x " << img1.cols << std::endl;
     std::cout << "img2 infos after resize: " << img2.rows << " x " << img2.cols << std::endl;
 
 
     //设置需要检测的特征个数
-    int n_features = 4000;
+    int n_features = 2000;
 
     // 进行sift特征的检测和匹配
     std::vector<cv::KeyPoint> sift_keypts1, sift_keypts2;
