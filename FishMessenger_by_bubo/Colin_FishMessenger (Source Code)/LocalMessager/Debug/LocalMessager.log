@@ -1,0 +1,9 @@
+﻿生成启动时间为 2016/7/2 星期六 上午 10:25:30。
+     1>项目“E:\shuang\bubo项目班资料\FishMessenger by bubo\Colin_FishMessenger (Source Code)\LocalMessager\LocalMessager.vcxproj”在节点 2 上(Rebuild 个目标)。
+       项目文件包含 ToolsVersion="12.0"。此工具集可能未知或缺失(您可以通过安装相应版本的 MSBuild 来解决该问题)，或者该生成因策略原因已被强制更改为特殊 ToolsVersion。将此项目视作具有 ToolsVersion="4.0"。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkId=291333。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.Cpp.Platform.targets(44,5): error MSB8020: The builds tools for v120_xp (Platform Toolset = 'v120_xp') cannot be found. To build using the v120_xp build tools, either click the Project menu or right-click the solution, and then select "Update VC++ Projects...". Install v120_xp to build using the v120_xp build tools.
+     1>已完成生成项目“E:\shuang\bubo项目班资料\FishMessenger by bubo\Colin_FishMessenger (Source Code)\LocalMessager\LocalMessager.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.02

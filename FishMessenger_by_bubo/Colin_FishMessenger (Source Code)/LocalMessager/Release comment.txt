@@ -1,0 +1,11 @@
+//--------------------------------------------------------------
+//	Release comment.txt.
+//	6/16/2013.		2/26/2014 Modified.
+//	by bubo.
+//--------------------------------------------------------------
+
+Running Platform: Windows7, x86 (XP) / x64 at least.
+Buliding Tool: Visual Studio C++ 2012 Service Pack 2.
+Buliding Tool: Visual Studio C++ 2013.
+
+

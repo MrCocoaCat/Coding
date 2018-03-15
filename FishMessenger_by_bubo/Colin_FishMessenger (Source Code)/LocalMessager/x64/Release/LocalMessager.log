@@ -1,0 +1,74 @@
+﻿Build started 11/13/2014 9:29:13 PM.
+     1>Project "D:\Keg\trunk\Colin_FishMessenger_IPv6\LocalMessager\LocalMessager.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (FishMessenger_IPv6.vcxproj, FishMessager.vcxproj, FishMessenger.vcxproj, LocalMessager.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /MP /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt Commander.cpp Communicator.cpp ProgressDialog.cpp SettingsDialog.cpp MainEntry.cpp TransferIndicator.cpp UIManager.cpp UserDialog.cpp
+         Commander.cpp
+         Communicator.cpp
+         ProgressDialog.cpp
+         SettingsDialog.cpp
+         MainEntry.cpp
+     1>Commander.cpp(175): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>Communicator.cpp(706): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>Communicator.cpp(759): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>Communicator.cpp(815): warning C4244: 'argument' : conversion from 'std::streamsize' to 'int', possible loss of data
+     1>Communicator.cpp(958): warning C4244: 'argument' : conversion from 'std::streamsize' to 'int', possible loss of data
+     1>Communicator.cpp(1056): warning C4267: '=' : conversion from 'size_t' to 'unsigned long', possible loss of data
+     1>Communicator.cpp(1074): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>Communicator.cpp(1101): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>Communicator.cpp(1134): warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+     1>Communicator.cpp(1195): warning C4244: '=' : conversion from '__int64' to 'int', possible loss of data
+         TransferIndicator.cpp
+         UIManager.cpp
+     1>MainEntry.cpp(106): warning C4244: 'return' : conversion from 'WPARAM' to 'int', possible loss of data
+         UserDialog.cpp
+     1>UIManager.cpp(266): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>UIManager.cpp(482): warning C4101: 'pitem' : unreferenced local variable
+     1>UIManager.cpp(580): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>UIManager.cpp(596): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>UIManager.cpp(612): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>TransferIndicator.cpp(555): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>TransferIndicator.cpp(730): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>TransferIndicator.cpp(1155): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(162): warning C4018: '<' : signed/unsigned mismatch
+     1>UserDialog.cpp(307): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(487): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(511): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(576): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>UserDialog.cpp(580): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(569): warning C4101: 'szTempIP' : unreferenced local variable
+     1>UserDialog.cpp(628): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>UserDialog.cpp(630): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>UserDialog.cpp(633): warning C4996: 'swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\swprintf.inl(85) : see declaration of 'swprintf'
+     1>UserDialog.cpp(635): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"x64\Release\LocalMessager.res" LocalMessager.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Keg\trunk\Colin_FishMessenger_IPv6\x64\Release\FishMessenger®_IPv6_x64.exe" /VERSION:"1.2" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Keg\trunk\Colin_FishMessenger_IPv6\x64\Release\FishMessenger®_IPv6_x64.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Keg\trunk\Colin_FishMessenger_IPv6\x64\Release\FishMessenger®_IPv6_x64.lib" /MACHINE:X64 x64\Release\LocalMessager.res
+         x64\Release\Commander.obj
+         x64\Release\Communicator.obj
+         x64\Release\ProgressDialog.obj
+         x64\Release\SettingsDialog.obj
+         x64\Release\MainEntry.obj
+         x64\Release\TransferIndicator.obj
+         x64\Release\UIManager.obj
+         x64\Release\UserDialog.obj
+         Generating code
+         Finished generating code
+         LocalMessager.vcxproj -> D:\Keg\trunk\Colin_FishMessenger_IPv6\x64\Release\FishMessenger®_IPv6_x64.exe
+     1>Done Building Project "D:\Keg\trunk\Colin_FishMessenger_IPv6\LocalMessager\LocalMessager.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:05.51

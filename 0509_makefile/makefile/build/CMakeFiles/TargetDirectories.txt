@@ -1,3 +1,0 @@
-/home/liyubo/colin/0509_makefile/makefile/build/CMakeFiles/rebuild_cache.dir
-/home/liyubo/colin/0509_makefile/makefile/build/CMakeFiles/edit_cache.dir
-/home/liyubo/colin/0509_makefile/makefile/build/CMakeFiles/app.dir
