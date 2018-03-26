@@ -61,7 +61,7 @@ int main()
 		return -1;
 	}
 	//creat epoll
-	epoll_id=epoll_create(100);//管理100个
+	epoll_id = epoll_create(100);//管理100个
 
 	//promote sock to epoll
 	/**************************************************************

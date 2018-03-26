@@ -32,11 +32,13 @@ struct STR_login:public STR_BASE
 		char m_Password[MAXPASSWORDLEN];
 };
 int STR_login::m_MinLen = 12; //buf最小长度，如果小于这个值，那么一定错误
+
 STR_login::STR_login():STR_BASE(STR_LOGINTYPE) //调用父类带参数构造
 {
 		m_Id=0;
 		m_PasswordLen=0;
 }
+//序列化
 long  STR_login::Serialize(char szBuf[],long lBufLen)
 {
 	//检查长度是否满足长度
@@ -64,6 +66,7 @@ long  STR_login::Serialize(char szBuf[],long lBufLen)
 	return (STR_login::m_MinLen + m_PasswordLen);
 
 }
+//反序列化
 bool STR_login::UnSerialize(const char szBuf[],long lBufLen)
 {
 	if( STR_login::m_MinLen > lBufLen)

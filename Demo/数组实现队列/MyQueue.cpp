@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include<iostream>
 #ifndef MYQUEUE_H
 #define MYQUEUE_H

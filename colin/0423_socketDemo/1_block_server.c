@@ -41,19 +41,15 @@ int main()
 	bzero(&serveraddr,sizeof(serveraddr));
 
 	//creat socket	
-	serverfd=socket(AF_INET,SOCK_STREAM,0);
-
+	serverfd= socket(AF_INET,SOCK_STREAM,0);
 	//构造serveraddr
 	serveraddr.sin_family=AF_INET;
 	serveraddr.sin_addr.s_addr=htonl(INADDR_ANY);
 	serveraddr.sin_port=htons(PORT);
-
-	//bind
+//bind
 	bind(serverfd,(struct sockaddr *)&serveraddr,sizeof(serveraddr));
-
 	//listen
 	listen(serverfd,LISTENNUM);
-
      //  set_block(serverfd,0);
 	//accept
 	while(1)

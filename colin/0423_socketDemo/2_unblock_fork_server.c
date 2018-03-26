@@ -46,10 +46,10 @@ int main()
 	//init address
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(10240);//主机字节序转网络字节序
-
 	//addr.sin_addr.s_addr = inet_addr("192.168.");
 	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	//bind
+
 	ret = bind(sock,(struct sockaddr *)&addr,sizeof(addr));
 	if(ret == -1)
 	{
@@ -58,6 +58,7 @@ int main()
 		return -1;
 	}
 	//listen
+
 	ret = listen(sock , 5);
 	if(-1 == ret)
 	{
@@ -158,5 +159,4 @@ int main()
 	//close
 	close(sock);
 	return 0;
-
 }
