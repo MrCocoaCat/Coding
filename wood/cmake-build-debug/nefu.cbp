@@ -878,8 +878,11 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/liyubo/Code/NEFU/wood/Triangulation.cpp">
+		<Unit filename="/home/liyubo/Code/NEFU/wood/15_Triangulation.cpp">
 			<Option target="Triangulation"/>
+		</Unit>
+		<Unit filename="/home/liyubo/Code/NEFU/wood/15_possion.cpp">
+			<Option target="possion"/>
 		</Unit>
 		<Unit filename="/home/liyubo/Code/NEFU/wood/bfm_matcher.cpp">
 			<Option target="bfm_matcher"/>
@@ -905,9 +908,6 @@
 		</Unit>
 		<Unit filename="/home/liyubo/Code/NEFU/wood/knn_matcher.cpp">
 			<Option target="knn_matcher"/>
-		</Unit>
-		<Unit filename="/home/liyubo/Code/NEFU/wood/possion.cpp">
-			<Option target="possion"/>
 		</Unit>
 		<Unit filename="/home/liyubo/Code/NEFU/wood/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

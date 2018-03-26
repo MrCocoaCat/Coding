@@ -13,10 +13,10 @@ add_executable (filter extract_indices.cpp )
 target_link_libraries (filter ${PCL_LIBRARIES})
 
 
-add_executable (Triangulation  Triangulation.cpp )
+add_executable (Triangulation 15_Triangulation.cpp)
 target_link_libraries (Triangulation ${PCL_LIBRARIES})
 
-add_executable (possion   possion.cpp)
+add_executable (possion 15_possion.cpp)
 target_link_libraries (possion ${PCL_LIBRARIES})
 
 add_executable (etra   etra.cpp)

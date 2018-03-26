@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liyubo/Code/NEFU/wood/possion.cpp" "/home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/possion.dir/possion.cpp.o"
+  "/home/liyubo/Code/NEFU/wood/15_possion.cpp" "/home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/possion.dir/15_possion.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

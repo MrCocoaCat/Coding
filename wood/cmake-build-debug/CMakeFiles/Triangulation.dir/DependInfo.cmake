@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liyubo/Code/NEFU/wood/Triangulation.cpp" "/home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/Triangulation.dir/Triangulation.cpp.o"
+  "/home/liyubo/Code/NEFU/wood/15_Triangulation.cpp" "/home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/Triangulation.dir/15_Triangulation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
