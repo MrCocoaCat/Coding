@@ -252,6 +252,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/knn_matcher.dir/DependInfo.cmake"
   "CMakeFiles/feature_detection.dir/DependInfo.cmake"
+  "CMakeFiles/cube.dir/DependInfo.cmake"
   "CMakeFiles/possion.dir/DependInfo.cmake"
   "CMakeFiles/Triangulation.dir/DependInfo.cmake"
   "CMakeFiles/bfm_matcher.dir/DependInfo.cmake"

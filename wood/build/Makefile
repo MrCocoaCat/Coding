@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liyubo/Code/PCL-Tutorials/nefu
+CMAKE_SOURCE_DIR = /home/liyubo/Code/NEFU/wood
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liyubo/Code/PCL-Tutorials/nefu/build
+CMAKE_BINARY_DIR = /home/liyubo/Code/NEFU/wood/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles /home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyubo/Code/NEFU/wood/build/CMakeFiles /home/liyubo/Code/NEFU/wood/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liyubo/Code/NEFU/wood/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,30 +111,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named surface
+# Target rules for targets named knn_matcher
 
 # Build rule for target.
-surface: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 surface
-.PHONY : surface
+knn_matcher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 knn_matcher
+.PHONY : knn_matcher
 
 # fast build rule for target.
-surface/fast:
-	$(MAKE) -f CMakeFiles/surface.dir/build.make CMakeFiles/surface.dir/build
-.PHONY : surface/fast
+knn_matcher/fast:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/build
+.PHONY : knn_matcher/fast
 
 #=============================================================================
-# Target rules for targets named possion
+# Target rules for targets named feature_detection
 
 # Build rule for target.
-possion: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 possion
-.PHONY : possion
+feature_detection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 feature_detection
+.PHONY : feature_detection
 
 # fast build rule for target.
-possion/fast:
-	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/build
-.PHONY : possion/fast
+feature_detection/fast:
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/build
+.PHONY : feature_detection/fast
+
+#=============================================================================
+# Target rules for targets named bfm_matcher
+
+# Build rule for target.
+bfm_matcher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bfm_matcher
+.PHONY : bfm_matcher
+
+# fast build rule for target.
+bfm_matcher/fast:
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/build
+.PHONY : bfm_matcher/fast
+
+#=============================================================================
+# Target rules for targets named etra
+
+# Build rule for target.
+etra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 etra
+.PHONY : etra
+
+# fast build rule for target.
+etra/fast:
+	$(MAKE) -f CMakeFiles/etra.dir/build.make CMakeFiles/etra.dir/build
+.PHONY : etra/fast
 
 #=============================================================================
 # Target rules for targets named filter
@@ -150,17 +176,151 @@ filter/fast:
 .PHONY : filter/fast
 
 #=============================================================================
-# Target rules for targets named etra
+# Target rules for targets named Triangulation
 
 # Build rule for target.
-etra: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 etra
-.PHONY : etra
+Triangulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Triangulation
+.PHONY : Triangulation
 
 # fast build rule for target.
-etra/fast:
-	$(MAKE) -f CMakeFiles/etra.dir/build.make CMakeFiles/etra.dir/build
-.PHONY : etra/fast
+Triangulation/fast:
+	$(MAKE) -f CMakeFiles/Triangulation.dir/build.make CMakeFiles/Triangulation.dir/build
+.PHONY : Triangulation/fast
+
+#=============================================================================
+# Target rules for targets named possion
+
+# Build rule for target.
+possion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 possion
+.PHONY : possion
+
+# fast build rule for target.
+possion/fast:
+	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/build
+.PHONY : possion/fast
+
+#=============================================================================
+# Target rules for targets named cube
+
+# Build rule for target.
+cube: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cube
+.PHONY : cube
+
+# fast build rule for target.
+cube/fast:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/build
+.PHONY : cube/fast
+
+15_Triangulation.o: 15_Triangulation.cpp.o
+
+.PHONY : 15_Triangulation.o
+
+# target to build an object file
+15_Triangulation.cpp.o:
+	$(MAKE) -f CMakeFiles/Triangulation.dir/build.make CMakeFiles/Triangulation.dir/15_Triangulation.cpp.o
+.PHONY : 15_Triangulation.cpp.o
+
+15_Triangulation.i: 15_Triangulation.cpp.i
+
+.PHONY : 15_Triangulation.i
+
+# target to preprocess a source file
+15_Triangulation.cpp.i:
+	$(MAKE) -f CMakeFiles/Triangulation.dir/build.make CMakeFiles/Triangulation.dir/15_Triangulation.cpp.i
+.PHONY : 15_Triangulation.cpp.i
+
+15_Triangulation.s: 15_Triangulation.cpp.s
+
+.PHONY : 15_Triangulation.s
+
+# target to generate assembly for a file
+15_Triangulation.cpp.s:
+	$(MAKE) -f CMakeFiles/Triangulation.dir/build.make CMakeFiles/Triangulation.dir/15_Triangulation.cpp.s
+.PHONY : 15_Triangulation.cpp.s
+
+15_cube.o: 15_cube.cpp.o
+
+.PHONY : 15_cube.o
+
+# target to build an object file
+15_cube.cpp.o:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.o
+.PHONY : 15_cube.cpp.o
+
+15_cube.i: 15_cube.cpp.i
+
+.PHONY : 15_cube.i
+
+# target to preprocess a source file
+15_cube.cpp.i:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.i
+.PHONY : 15_cube.cpp.i
+
+15_cube.s: 15_cube.cpp.s
+
+.PHONY : 15_cube.s
+
+# target to generate assembly for a file
+15_cube.cpp.s:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.s
+.PHONY : 15_cube.cpp.s
+
+15_possion.o: 15_possion.cpp.o
+
+.PHONY : 15_possion.o
+
+# target to build an object file
+15_possion.cpp.o:
+	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/15_possion.cpp.o
+.PHONY : 15_possion.cpp.o
+
+15_possion.i: 15_possion.cpp.i
+
+.PHONY : 15_possion.i
+
+# target to preprocess a source file
+15_possion.cpp.i:
+	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/15_possion.cpp.i
+.PHONY : 15_possion.cpp.i
+
+15_possion.s: 15_possion.cpp.s
+
+.PHONY : 15_possion.s
+
+# target to generate assembly for a file
+15_possion.cpp.s:
+	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/15_possion.cpp.s
+.PHONY : 15_possion.cpp.s
+
+bfm_matcher.o: bfm_matcher.cpp.o
+
+.PHONY : bfm_matcher.o
+
+# target to build an object file
+bfm_matcher.cpp.o:
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/bfm_matcher.cpp.o
+.PHONY : bfm_matcher.cpp.o
+
+bfm_matcher.i: bfm_matcher.cpp.i
+
+.PHONY : bfm_matcher.i
+
+# target to preprocess a source file
+bfm_matcher.cpp.i:
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/bfm_matcher.cpp.i
+.PHONY : bfm_matcher.cpp.i
+
+bfm_matcher.s: bfm_matcher.cpp.s
+
+.PHONY : bfm_matcher.s
+
+# target to generate assembly for a file
+bfm_matcher.cpp.s:
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/bfm_matcher.cpp.s
+.PHONY : bfm_matcher.cpp.s
 
 etra.o: etra.cpp.o
 
@@ -216,59 +376,92 @@ extract_indices.cpp.s:
 	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/extract_indices.cpp.s
 .PHONY : extract_indices.cpp.s
 
-possion.o: possion.cpp.o
+features.o: features.cpp.o
 
-.PHONY : possion.o
-
-# target to build an object file
-possion.cpp.o:
-	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/possion.cpp.o
-.PHONY : possion.cpp.o
-
-possion.i: possion.cpp.i
-
-.PHONY : possion.i
-
-# target to preprocess a source file
-possion.cpp.i:
-	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/possion.cpp.i
-.PHONY : possion.cpp.i
-
-possion.s: possion.cpp.s
-
-.PHONY : possion.s
-
-# target to generate assembly for a file
-possion.cpp.s:
-	$(MAKE) -f CMakeFiles/possion.dir/build.make CMakeFiles/possion.dir/possion.cpp.s
-.PHONY : possion.cpp.s
-
-surface.o: surface.cpp.o
-
-.PHONY : surface.o
+.PHONY : features.o
 
 # target to build an object file
-surface.cpp.o:
-	$(MAKE) -f CMakeFiles/surface.dir/build.make CMakeFiles/surface.dir/surface.cpp.o
-.PHONY : surface.cpp.o
+features.cpp.o:
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/features.cpp.o
+.PHONY : features.cpp.o
 
-surface.i: surface.cpp.i
+features.i: features.cpp.i
 
-.PHONY : surface.i
+.PHONY : features.i
 
 # target to preprocess a source file
-surface.cpp.i:
-	$(MAKE) -f CMakeFiles/surface.dir/build.make CMakeFiles/surface.dir/surface.cpp.i
-.PHONY : surface.cpp.i
+features.cpp.i:
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/features.cpp.i
+.PHONY : features.cpp.i
 
-surface.s: surface.cpp.s
+features.s: features.cpp.s
 
-.PHONY : surface.s
+.PHONY : features.s
 
 # target to generate assembly for a file
-surface.cpp.s:
-	$(MAKE) -f CMakeFiles/surface.dir/build.make CMakeFiles/surface.dir/surface.cpp.s
-.PHONY : surface.cpp.s
+features.cpp.s:
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/features.cpp.s
+.PHONY : features.cpp.s
+
+functions.o: functions.cpp.o
+
+.PHONY : functions.o
+
+# target to build an object file
+functions.cpp.o:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/functions.cpp.o
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/functions.cpp.o
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/functions.cpp.o
+.PHONY : functions.cpp.o
+
+functions.i: functions.cpp.i
+
+.PHONY : functions.i
+
+# target to preprocess a source file
+functions.cpp.i:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/functions.cpp.i
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/functions.cpp.i
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/functions.cpp.i
+.PHONY : functions.cpp.i
+
+functions.s: functions.cpp.s
+
+.PHONY : functions.s
+
+# target to generate assembly for a file
+functions.cpp.s:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/functions.cpp.s
+	$(MAKE) -f CMakeFiles/feature_detection.dir/build.make CMakeFiles/feature_detection.dir/functions.cpp.s
+	$(MAKE) -f CMakeFiles/bfm_matcher.dir/build.make CMakeFiles/bfm_matcher.dir/functions.cpp.s
+.PHONY : functions.cpp.s
+
+knn_matcher.o: knn_matcher.cpp.o
+
+.PHONY : knn_matcher.o
+
+# target to build an object file
+knn_matcher.cpp.o:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/knn_matcher.cpp.o
+.PHONY : knn_matcher.cpp.o
+
+knn_matcher.i: knn_matcher.cpp.i
+
+.PHONY : knn_matcher.i
+
+# target to preprocess a source file
+knn_matcher.cpp.i:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/knn_matcher.cpp.i
+.PHONY : knn_matcher.cpp.i
+
+knn_matcher.s: knn_matcher.cpp.s
+
+.PHONY : knn_matcher.s
+
+# target to generate assembly for a file
+knn_matcher.cpp.s:
+	$(MAKE) -f CMakeFiles/knn_matcher.dir/build.make CMakeFiles/knn_matcher.dir/knn_matcher.cpp.s
+.PHONY : knn_matcher.cpp.s
 
 # Help Target
 help:
@@ -276,24 +469,43 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... surface"
+	@echo "... knn_matcher"
+	@echo "... feature_detection"
+	@echo "... edit_cache"
+	@echo "... bfm_matcher"
+	@echo "... etra"
+	@echo "... filter"
+	@echo "... Triangulation"
 	@echo "... rebuild_cache"
 	@echo "... possion"
-	@echo "... edit_cache"
-	@echo "... filter"
-	@echo "... etra"
+	@echo "... cube"
+	@echo "... 15_Triangulation.o"
+	@echo "... 15_Triangulation.i"
+	@echo "... 15_Triangulation.s"
+	@echo "... 15_cube.o"
+	@echo "... 15_cube.i"
+	@echo "... 15_cube.s"
+	@echo "... 15_possion.o"
+	@echo "... 15_possion.i"
+	@echo "... 15_possion.s"
+	@echo "... bfm_matcher.o"
+	@echo "... bfm_matcher.i"
+	@echo "... bfm_matcher.s"
 	@echo "... etra.o"
 	@echo "... etra.i"
 	@echo "... etra.s"
 	@echo "... extract_indices.o"
 	@echo "... extract_indices.i"
 	@echo "... extract_indices.s"
-	@echo "... possion.o"
-	@echo "... possion.i"
-	@echo "... possion.s"
-	@echo "... surface.o"
-	@echo "... surface.i"
-	@echo "... surface.s"
+	@echo "... features.o"
+	@echo "... features.i"
+	@echo "... features.s"
+	@echo "... functions.o"
+	@echo "... functions.i"
+	@echo "... functions.s"
+	@echo "... knn_matcher.o"
+	@echo "... knn_matcher.i"
+	@echo "... knn_matcher.s"
 .PHONY : help
 
 

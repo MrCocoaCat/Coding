@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/liyubo/Code/PCL-Tutorials/nefu/extract_indices.cpp
+/home/liyubo/Code/NEFU/wood/extract_indices.cpp
 iostream
 -
 string

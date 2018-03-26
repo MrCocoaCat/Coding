@@ -9,7 +9,7 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-add_executable (filter extract_indices.cpp )
+add_executable (filter 8_passfilter.cpp)
 target_link_libraries (filter ${PCL_LIBRARIES})
 
 
@@ -19,7 +19,10 @@ target_link_libraries (Triangulation ${PCL_LIBRARIES})
 add_executable (possion 15_possion.cpp)
 target_link_libraries (possion ${PCL_LIBRARIES})
 
-add_executable (etra   etra.cpp)
+add_executable (cube 15_cube.cpp)
+target_link_libraries (cube ${PCL_LIBRARIES})
+
+add_executable (etra ransac.cpp)
 target_link_libraries (etra ${PCL_LIBRARIES})
 
 

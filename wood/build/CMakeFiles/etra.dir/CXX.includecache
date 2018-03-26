@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/liyubo/Code/PCL-Tutorials/nefu/etra.cpp
+/home/liyubo/Code/NEFU/wood/etra.cpp
 iostream
 -
 pcl/io/pcd_io.h

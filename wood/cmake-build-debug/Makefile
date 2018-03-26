@@ -137,6 +137,19 @@ feature_detection/fast:
 .PHONY : feature_detection/fast
 
 #=============================================================================
+# Target rules for targets named cube
+
+# Build rule for target.
+cube: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cube
+.PHONY : cube
+
+# fast build rule for target.
+cube/fast:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/build
+.PHONY : cube/fast
+
+#=============================================================================
 # Target rules for targets named possion
 
 # Build rule for target.
@@ -227,6 +240,33 @@ filter/fast:
 15_Triangulation.cpp.s:
 	$(MAKE) -f CMakeFiles/Triangulation.dir/build.make CMakeFiles/Triangulation.dir/15_Triangulation.cpp.s
 .PHONY : 15_Triangulation.cpp.s
+
+15_cube.o: 15_cube.cpp.o
+
+.PHONY : 15_cube.o
+
+# target to build an object file
+15_cube.cpp.o:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.o
+.PHONY : 15_cube.cpp.o
+
+15_cube.i: 15_cube.cpp.i
+
+.PHONY : 15_cube.i
+
+# target to preprocess a source file
+15_cube.cpp.i:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.i
+.PHONY : 15_cube.cpp.i
+
+15_cube.s: 15_cube.cpp.s
+
+.PHONY : 15_cube.s
+
+# target to generate assembly for a file
+15_cube.cpp.s:
+	$(MAKE) -f CMakeFiles/cube.dir/build.make CMakeFiles/cube.dir/15_cube.cpp.s
+.PHONY : 15_cube.cpp.s
 
 15_possion.o: 15_possion.cpp.o
 
@@ -431,6 +471,7 @@ help:
 	@echo "... depend"
 	@echo "... knn_matcher"
 	@echo "... feature_detection"
+	@echo "... cube"
 	@echo "... rebuild_cache"
 	@echo "... possion"
 	@echo "... Triangulation"
@@ -441,6 +482,9 @@ help:
 	@echo "... 15_Triangulation.o"
 	@echo "... 15_Triangulation.i"
 	@echo "... 15_Triangulation.s"
+	@echo "... 15_cube.o"
+	@echo "... 15_cube.i"
+	@echo "... 15_cube.s"
 	@echo "... 15_possion.o"
 	@echo "... 15_possion.i"
 	@echo "... 15_possion.s"

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liyubo/Code/PCL-Tutorials/nefu/extract_indices.cpp" "/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/filter.dir/extract_indices.cpp.o"
+  "/home/liyubo/Code/NEFU/wood/extract_indices.cpp" "/home/liyubo/Code/NEFU/wood/build/CMakeFiles/filter.dir/extract_indices.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

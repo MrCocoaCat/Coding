@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/liyubo/Code/PCL-Tutorials/nefu/possion.cpp
+/home/liyubo/Code/NEFU/wood/15_possion.cpp
 pcl/point_types.h
 -
 pcl/io/pcd_io.h

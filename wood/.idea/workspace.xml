@@ -2,13 +2,14 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="nefu" targetName="feature_detection" />
-      <config projectName="nefu" targetName="etra" />
-      <config projectName="nefu" targetName="filter" />
       <config projectName="nefu" targetName="knn_matcher" />
       <config projectName="nefu" targetName="Triangulation" />
-      <config projectName="nefu" targetName="possion" />
+      <config projectName="nefu" targetName="cube" />
+      <config projectName="nefu" targetName="filter" />
+      <config projectName="nefu" targetName="etra" />
       <config projectName="nefu" targetName="bfm_matcher" />
+      <config projectName="nefu" targetName="possion" />
+      <config projectName="nefu" targetName="feature_detection" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -32,29 +33,21 @@
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state relative-caret-position="393">
+              <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="etra.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/etra.cpp">
+      <file leaf-file-name="ransac.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ransac.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="890">
+              <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="23" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +67,7 @@
       <file leaf-file-name="features.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="630">
               <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -86,7 +79,7 @@
       <file leaf-file-name="15_possion.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/15_possion.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
+            <state relative-caret-position="1836">
               <caret line="102" column="24" lean-forward="false" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="24" />
               <folding />
             </state>
@@ -113,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extract_indices.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+      <file leaf-file-name="8_passfilter.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/8_passfilter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -125,12 +118,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bfm_matcher.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bfm_matcher.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
+            <state relative-caret-position="24">
               <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="15_cube.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/15_cube.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="96" column="39" lean-forward="false" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,12 +146,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/surface.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/features.cpp" />
         <option value="$PROJECT_DIR$/bfm_matcher.cpp" />
         <option value="$PROJECT_DIR$/knn_matcher.cpp" />
         <option value="$PROJECT_DIR$/possion.cpp" />
         <option value="$PROJECT_DIR$/Triangulation.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/15_cube.cpp" />
       </list>
     </option>
   </component>
@@ -156,11 +162,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="179" />
-    <option name="y" value="234" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="215" />
+    <option name="y" value="123" />
     <option name="width" value="1495" />
-    <option name="height" value="965" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -207,16 +213,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.bfm_matcher">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="etra" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="Triangulation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="Triangulation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="Triangulation">
       <envs />
     </configuration>
-    <configuration name="bfm_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg ../0020_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="bfm_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
+    <configuration name="bfm_matcher" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg ../0020_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="bfm_matcher" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="etra">
       <envs />
     </configuration>
-    <configuration name="etra" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="etra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
+    <configuration name="cube" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="cube" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="etra">
+      <envs />
+    </configuration>
+    <configuration name="etra" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="etra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="etra">
       <envs />
     </configuration>
     <configuration name="feature_detection" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../0021_color.jpg" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="feature_detection" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="knn_matcher">
@@ -231,15 +240,16 @@
     <configuration name="possion" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="nefu" TARGET_NAME="possion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="nefu" RUN_TARGET_NAME="surface">
       <envs />
     </configuration>
-    <list size="8">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.bfm_matcher" />
-      <item index="2" class="java.lang.String" itemvalue="Application.etra" />
-      <item index="3" class="java.lang.String" itemvalue="Application.feature_detection" />
-      <item index="4" class="java.lang.String" itemvalue="Application.filter" />
-      <item index="5" class="java.lang.String" itemvalue="Application.knn_matcher" />
-      <item index="6" class="java.lang.String" itemvalue="Application.possion" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Triangulation" />
+      <item index="2" class="java.lang.String" itemvalue="Application.cube" />
+      <item index="3" class="java.lang.String" itemvalue="Application.etra" />
+      <item index="4" class="java.lang.String" itemvalue="Application.feature_detection" />
+      <item index="5" class="java.lang.String" itemvalue="Application.filter" />
+      <item index="6" class="java.lang.String" itemvalue="Application.knn_matcher" />
+      <item index="7" class="java.lang.String" itemvalue="Application.possion" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Triangulation" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -262,25 +272,27 @@
       <workItem from="1521177192121" duration="14000" />
       <workItem from="1521876074757" duration="613000" />
       <workItem from="1521876807479" duration="1919000" />
+      <workItem from="1522061570509" duration="961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7138000" />
+    <option name="totallyTimeSpent" value="8099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="179" y="234" width="1495" height="965" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20087336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.375895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.375895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.375895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -302,16 +314,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="e#71#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/table_scene_lms400.pcd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -319,7 +321,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etra.cpp">
+    <entry file="file://$PROJECT_DIR$/ransac.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -371,7 +373,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+    <entry file="file://$PROJECT_DIR$/8_passfilter.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -404,7 +406,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etra.cpp">
+    <entry file="file://$PROJECT_DIR$/ransac.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -456,7 +458,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+    <entry file="file://$PROJECT_DIR$/8_passfilter.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -497,7 +499,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etra.cpp">
+    <entry file="file://$PROJECT_DIR$/ransac.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -541,7 +543,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+    <entry file="file://$PROJECT_DIR$/8_passfilter.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -618,39 +620,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etra.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="e#71#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/15_possion.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
+        <state relative-caret-position="1836">
           <caret line="102" column="24" lean-forward="false" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="24" />
           <folding />
         </state>
@@ -672,18 +646,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state relative-caret-position="393">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extract_indices.cpp">
+    <entry file="file://$PROJECT_DIR$/15_cube.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
+        <state relative-caret-position="106">
+          <caret line="96" column="39" lean-forward="false" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8_passfilter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knn_matcher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <element signature="e#71#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,11 +690,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/features.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bfm_matcher.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
+        <state relative-caret-position="24">
           <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ransac.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="23" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

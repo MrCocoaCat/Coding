@@ -1,6 +1,10 @@
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/surface.dir
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/rebuild_cache.dir
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/possion.dir
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/edit_cache.dir
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/filter.dir
-/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/etra.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/knn_matcher.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/feature_detection.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/edit_cache.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/bfm_matcher.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/etra.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/filter.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/Triangulation.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/rebuild_cache.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/possion.dir
+/home/liyubo/Code/NEFU/wood/build/CMakeFiles/cube.dir

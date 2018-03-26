@@ -1,5 +1,6 @@
 /home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/knn_matcher.dir
 /home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/feature_detection.dir
+/home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/cube.dir
 /home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/possion.dir
 /home/liyubo/Code/NEFU/wood/cmake-build-debug/CMakeFiles/Triangulation.dir

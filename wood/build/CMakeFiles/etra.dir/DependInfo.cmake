@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liyubo/Code/PCL-Tutorials/nefu/etra.cpp" "/home/liyubo/Code/PCL-Tutorials/nefu/build/CMakeFiles/etra.dir/etra.cpp.o"
+  "/home/liyubo/Code/NEFU/wood/etra.cpp" "/home/liyubo/Code/NEFU/wood/build/CMakeFiles/etra.dir/etra.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
