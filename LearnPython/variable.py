@@ -32,3 +32,7 @@ print(aa%'hanmeimei')
 #利用format函数
 aa="I love {}".format("lilei")
 print(aa)
+#运算符
+print(5/2)
+#取整
+print(5//2)
