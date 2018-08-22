@@ -30,3 +30,5 @@ print(s)
 aa='I love %s'
 print(aa%'hanmeimei')
 #利用format函数
+aa="I love {}".format("lilei")
+print(aa)
