@@ -139,11 +139,18 @@ print(ss)
 # frozen set 冰冻集合
 
 
-# 字典dict
+# 字典dict, key:value
 d = {"one": 1, "twe": 2, "three": 3}
 print(d)
 
+print(d["one"])
+# 遍历字典
+for k in d.keys():
+    print(k, d[k], end=" ")
 
+for v in d.values():
+    print(v, end=" ")
 
-
+for k, v in d.items():
+    print(k, "---", v, end=" ")
 
