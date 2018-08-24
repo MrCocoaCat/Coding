@@ -118,3 +118,32 @@ for i in tt:
 
 
 
+print(type(t))
+
+print(a)
+tt = tuple(a)
+print(tt)
+
+# set集合,数据唯一,并且自动排序
+s = {9, 1, 2, 3, 5, 1}
+print(s)
+# 集合内涵
+
+ss = {i for i in s if i % 2 == 0}
+print(ss)
+
+# add 向集合中添加元素, pop是随机删除
+ss.add(1010)
+print(ss)
+
+# frozen set 冰冻集合
+
+
+# 字典dict
+d = {"one": 1, "twe": 2, "three": 3}
+print(d)
+
+
+
+
+
