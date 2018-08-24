@@ -74,12 +74,15 @@ print(ll)
 ll.remove(2)
 # 清空列表
 ll.clear()
-# 反转列表，直接对原地址进行操作
+# 反转列表，直接对原地址进行操作,extend是扩展
 lv = [1, 2, 3]
 lv.reverse()
 print(lv)
 # count 查找列表中元素个数
 print(list(s))
+
+
+#
 
 # 复杂变量传地址，简单变量传值
 i = lv.count(2)
@@ -87,12 +90,31 @@ print(i)
 # 利用 = 赋值是进行，直接指向统一快空间
 a = [1, 2, 3]
 b = a
+# 二者的id 相同
 print(id(a))
 print(id(b))
 a.append(5)
 print(b)
-# 利用copy函数是浅拷贝
+
+# 利用copy函数是浅拷贝，只复制一层
 c = a.copy()
 a.append(8)
-print(a)
-print(c)
+# c与a 的不相同
+print("a: ", a, id(a))
+print("c: ", c, id(c))
+
+
+# 元组tuple,可以看成是一个不可改变的list
+# 有序，元组可以是任意类型。总之list所有特性，除了修改元祖都有
+t = (1, 2)
+print(type(t))
+# 可以不带括号进行使用
+tt = 1, 2, 3, 4, 5
+print(type(tt))
+
+# 不可修改是指其元素不可修改
+for i in tt:
+    print(i, end=" ")
+
+
+
