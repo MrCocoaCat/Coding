@@ -60,3 +60,39 @@ print(max(l5))
 # 转换为列表
 s = "asdadfagafgatgr"
 print(list(s))
+
+# 复杂变量传地址，简单变量传值
+ll = [1, 2, 3, 4]
+ll.append(100)
+print(ll)
+ll.insert(3,300)
+print(ll)
+# 把最后一个元素删除
+ll.pop()
+print(ll)
+# 删除指定的元素,在原链表进行操作
+ll.remove(2)
+# 清空列表
+ll.clear()
+# 反转列表，直接对原地址进行操作
+lv = [1, 2, 3]
+lv.reverse()
+print(lv)
+# count 查找列表中元素个数
+print(list(s))
+
+# 复杂变量传地址，简单变量传值
+i = lv.count(2)
+print(i)
+# 利用 = 赋值是进行，直接指向统一快空间
+a = [1, 2, 3]
+b = a
+print(id(a))
+print(id(b))
+a.append(5)
+print(b)
+# 利用copy函数是浅拷贝
+c = a.copy()
+a.append(8)
+print(a)
+print(c)
