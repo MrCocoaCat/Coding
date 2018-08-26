@@ -17,6 +17,11 @@ class PythonStudent():
 wang = PythonStudent()
 print(wang.age)
 print(PythonStudent.__dict__)
+print(" ")
+print(wang.__dict__)
+
+wang.age = 19
+print(wang.__dict__)
 
 wang.myfun()
 print(wang.age)
