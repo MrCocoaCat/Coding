@@ -44,9 +44,35 @@ class Teacher():
 
 nnn = Teacher()
 nnn.sayhello()
+# 仅当其为对象时才会自动被传入
 Teacher.sayAgain()
 
+class A():
+
+    name = "liu"
+    age = 18
+
+    def __init__(self):
+        self.age = 19
+        self.name = "zhang"
+
+    def say(self):
+        print("*"*20)
+        print(self.name)
+        print(self.age)
 
 
+class B():
+    name = "liuuuuu"
+    age = 18888
 
 
+a = A()
+a.say()
+#　此时，self被a 替换
+A.say(a)
+# 同样，可以将A传入
+A.say(A)
+
+# 鸭子类型
+A.say(B)
