@@ -61,3 +61,38 @@ print(id(Person.name))
 
 T.sleep()
 T.work()
+
+print("*" * 30)
+# 构造函数若此类中没有，则查找父类的
+
+
+class Animal():
+    def __init__(self):
+        print("init animal      ")
+
+
+class Bulu(Animal):
+    def __init__(self, name):
+        print("Init bulu {0}".format(name))
+
+
+class Dog(Bulu):
+    def __init__(self):
+        print("init dog")
+
+
+class Cat(Bulu):
+    pass
+
+
+d = Dog()
+# 无构造则找父类构造
+
+# c = Cat(), 会报错，缺参数
+c = Cat("dsdf")
+
+# super 不是一个关键字，而是一个类
+# 其作用为获取MRO， 及列表中的第一个类
+
+
+
