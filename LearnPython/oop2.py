@@ -14,11 +14,50 @@ a = A()
 # print(a.age),会出错
 # 通过更改名字可以进行访问
 print(a._A__age)
-
-# 继承
-
-
 #　封装，对成员对象进行封装
 #  公开　public
 #  保护　protected
 #  私有　private　
+
+# 继承
+class Person():
+    name = "Noname"
+    age = 0
+    __score = 20  # 私有
+    _petname = "xiaohua"  # 保护
+
+    def sleep(self):
+        print("ummmmm")
+
+    def work(self):
+        print("make money,I'm {0}".format(self.name))
+
+
+class Teacher(Person):
+    name = "Nina"
+
+    def make_test(self):
+        print("attention, testing ")
+
+    def work(self):
+        # 调用父类的函数
+        Person.work(self)
+        # 也可以用super调用父类方法
+        super().work()
+        self.make_test()
+
+# 所有的类都继承于Object
+# 其可以使用除私有成员之外的所有成员
+
+# 如子类与父类的函数相同，则调用子类函数
+
+
+T = Teacher()
+print(T.name)
+print(T.age)
+# 通过引用使用，并没有进行拷贝
+print(id(T.name))
+print(id(Person.name))
+
+T.sleep()
+T.work()
