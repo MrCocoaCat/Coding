@@ -22,7 +22,3 @@ print(a._A__age)
 #  公开　public
 #  保护　protected
 #  私有　private　
-
-
-
-
