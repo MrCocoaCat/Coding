@@ -72,3 +72,22 @@ print(p.name)
 # __name__ 获取类的名称，如果在模块中使用，则获取模块名称
 # __base__　获取某个类的所有父类
 
+# 类的常用的魔术方法
+# 前后各有下划线，不需要调用
+# __new__ 函数．对象第一个调用
+# __call__
+class A():
+    def __init__(self):
+        print("sdsf")
+
+    def __call__(self, *args, **kwargs):
+        print("call_"*10)
+
+    def __str__(self):
+        return "str return "
+a = A()
+# 把实例当函数调用的时候，则调用__call__函数
+a()
+# 使用print 时，调用print 函数
+print(a)
+
