@@ -98,3 +98,17 @@ print(a)
 # 静态方法：不需要实例化（static）
 # 类方法: 不需要实例化
 
+class Person:
+    def eat(self):
+        pass
+
+    # 类方法
+    @classmethod
+    def play(cls):
+        pass
+
+    # 静态方法
+    @staticmethod
+    def say():
+        pass
+
