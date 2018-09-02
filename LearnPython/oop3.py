@@ -137,3 +137,26 @@ class Human(metaclass=abc.ABCMeta):
 # 抽象类不可以直接实例化
 # 子类需实现其继承的抽象方法
 
+# 元类
+# 元类一般以MetaClass 结尾
+# 元类必须继承于type
+print(" "*30)
+print("*"*30)
+print(" "*30)
+
+
+class TulingnMetaClass(type):
+    def __new__(cls, name, base, attrs):
+        print("这是元类")
+        attrs["id"] = "0000"
+        return type.__new__(cls, name, base, attrs)
+
+
+class Teacher(object,metaclass=TulingnMetaClass):
+    pass
+
+
+t = Teacher()
+print(t.id)
+
+
