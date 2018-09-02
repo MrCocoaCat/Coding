@@ -112,3 +112,28 @@ class Person:
     def say():
         pass
 
+# 抽象类
+import  abc
+class Human(metaclass=abc.ABCMeta):
+    # 抽象方法
+    @abc.abstractmethod
+    def smoking(self):
+        pass
+
+    # 抽象类方法
+    @classmethod
+    @abc.abstractmethod
+    def drink(cls):
+        pass
+
+    # 抽象静态函数
+    @staticmethod
+    @abc.abstractmethod
+    def play():
+        pass
+
+# 抽象类中可以包含正常的方法，也可以包含类方法
+# 可以有方法也可以有属性
+# 抽象类不可以直接实例化
+# 子类需实现其继承的抽象方法
+
