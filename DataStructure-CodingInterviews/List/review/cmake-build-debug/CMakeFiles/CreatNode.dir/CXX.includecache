@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/CreatNode.cpp
+CreateNode.h
+/home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/CreateNode.h
+iostream
+-
+
+/home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/CreateNode.h
+
+/home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/main.cpp
+iostream
+-
+CreateNode.h
+/home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/CreateNode.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/review.dir/CreatNode.cpp.o CMakeFiles/review.dir/main.cpp.o CMakeFiles/review.dir/mergeTwoList.cpp.o CMakeFiles/review.dir/ReList.cpp.o  -o review 

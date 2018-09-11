@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mergeTwoList.dir/CreateNode.cpp.o CMakeFiles/mergeTwoList.dir/mergeTwoList.cpp.o  -o mergeTwoList 

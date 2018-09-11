@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CreateNode.dir/CreateNode.cpp.o CMakeFiles/CreateNode.dir/main.cpp.o  -o CreateNode 

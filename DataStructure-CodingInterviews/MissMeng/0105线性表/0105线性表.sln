@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0105线性表", "0105线性表\0105线性表.vcxproj", "{CDBDC504-22CA-46BD-8DF0-6527C21AC91D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDBDC504-22CA-46BD-8DF0-6527C21AC91D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDBDC504-22CA-46BD-8DF0-6527C21AC91D}.Debug|Win32.Build.0 = Debug|Win32
+		{CDBDC504-22CA-46BD-8DF0-6527C21AC91D}.Release|Win32.ActiveCfg = Release|Win32
+		{CDBDC504-22CA-46BD-8DF0-6527C21AC91D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

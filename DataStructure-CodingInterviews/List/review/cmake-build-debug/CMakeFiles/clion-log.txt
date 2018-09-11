@@ -1,0 +1,4 @@
+/home/liyubo/clion-2017.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/liyubo/liyubo/Data_Structure-Coding_Interviews/List/review/cmake-build-debug
